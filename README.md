@@ -10,13 +10,16 @@ project_root/
 │   ├── main.py                # Entry point for FastAPI
 │   ├── api/
 │   │   └── endpoints/
-│   │       └── regression.py   # Routes for GET status and POST predict
+│   │       └── regression.py   # Routes for GET status, POST predict, and POST query
 │   ├── models/
 │   │   └── regression_model.py # Model loading and prediction logic
-│   └── schemas/
-│       └── request.py          # Request and response schemas
+│   ├── schemas/
+│   │   └── request.py          # Request and response schemas
+│   └── database.py             # Database connection and setup
 ├── model/
 │   └── regression_model.pkl    # Serialized regression model
+├── data/
+│   └── predictions.csv         # Saved predictions (if using CSV)
 ├── requirements.txt            # Dependencies
 └── README.md                   # Project documentation
 ```
