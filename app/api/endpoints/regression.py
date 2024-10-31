@@ -2,6 +2,7 @@ from fastapi import APIRouter
 from app.models.regression_model import predict
 from app.schemas.request import RegressionInput, RegressionOutput
 from datetime import datetime
+
 import pandas as pd
 router = APIRouter()
 
@@ -23,3 +24,5 @@ async def get_prediction(input_data: RegressionInput):
     df.to_csv("data/predictions.csv", mode='a', header=not pd.io.common.file_exists("data/predictions.csv"), index=False)
 
     return {"prediction": result}
+
+
